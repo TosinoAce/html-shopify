@@ -1,0 +1,618 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+*:focus{
+    outline: 2px solid #005BD3;
+    outline-offset: 1px;
+}
+body{
+    font-family: 'inter', sans-serif;
+    background-color: #f1f1f1;
+}
+a{
+    text-decoration: none;
+}
+.navBar{
+    background-color: #1A1A1A;
+    height: 56px;
+    display: flex;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+.brandLogo img{
+    height: 30px;
+}
+#logo1{
+    display: block;
+}
+#logo2{
+    display: none;
+}
+.searchBar{
+    position: relative;
+}
+.searchBar input{
+    width: 480px;
+    height: 32px;
+    padding: 10px 8px 10px 32px;
+    border-radius: 8px;
+    border: 1px solid #616161;
+    background-color: #303030;
+    color: #b5b5b5;
+}
+.searchBar input::placeholder{
+    font-weight: 500;
+    line-height: 18.2px;
+    height: 18px;
+    color: #b5b5b5;
+    font-family: 'inter', sans-serif;
+}
+.searchBar input:focus{
+    border: 2px solid #fff;
+    outline: none;
+}
+.searchBar svg{
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+    color: #b5b5b5;
+    cursor: pointer;
+}
+.notificationTab{
+    display: flex;
+    align-items: center;
+}
+.notificationTab button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background: #303030;
+    height: 32px;
+    cursor: pointer;
+}
+.notificationTab button:hover{
+    background-color: #616161;
+}
+.notificationTab button:active{
+    background-color: #656266;
+}
+.notificationTab button:focus{
+    outline: 2px solid #005bd3;
+    outline-offset: 1px;
+}
+.bell{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+.userName{
+    height: 32px;
+    border-radius: 8px;
+    color: #E3E3E3;
+    font-size: 12px;
+    line-height: 130%;
+}
+#full{
+    margin-left: 8px;
+}
+#sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 9px, 5px, 10px, 5px;
+    border-radius: 6px;
+    background-color: #36FBA1;
+    color: rgba(0, 0, 0, 0.40);
+    font-weight: 500;
+    margin-left: 8px;
+    margin-right: 2px;
+}
+
+
+.notification{
+    position: fixed;
+    max-width: 383px;
+    top: 64px;
+    right: 16px;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+#filter{
+    margin-right: 16px;
+}
+.notice{
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    color: #303030;
+}
+.notice button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.notice button:hover{
+    background-color: #f1f1f1;
+}
+.noticebody{
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #f1f1f1;
+    color: #616161;
+    line-height: 140%;
+    padding: 16px;
+    text-align: center;
+}
+
+
+.userMenu{
+    width: 100%;
+    max-width: 320px;
+    height: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 64px;
+    right: 16px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    z-index: 1;
+}
+.head{
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 4px 12px 4px 8px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+.head p{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #303030;
+}
+.head span{
+    width: 38px;
+    padding: 6.625px 5.875px 6.375px 6.125px;
+    border-radius: 5.25px;
+    background: #36FBA1;
+    margin-right: 8px;
+}
+.head2{
+    background: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding: 6px;
+    margin-top: 4px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #303030;
+    line-height: 140%;
+}
+.head2 svg{
+    margin-right: 8px;
+}
+.userMenu > div{
+    width: 100%;
+    padding: 6px;
+
+}
+.line{
+    width: 100%;
+    border-top: 1px solid #e1e1e1;
+}
+#username2{
+    display: block;
+    padding-left: 8px;
+    text-align: left;
+}
+.userMenu .head{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 4px 8px;
+}
+.userMenu li{
+    width: 100%;
+    list-style: none;
+}
+.userMenu li button{
+    width: 100%;
+    background: none;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #303030;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.userMenu li button span{
+    color: #616161;
+    font-size: 12px;
+    line-height: 130%;
+}
+.userMenu ul{
+    width: 100%;
+}
+
+
+/* main body styles */
+
+section{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 800px;
+}
+.heading{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px 12px 16px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #1C181D;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.intro{
+    color: #e3e3e3;
+}
+.selectPlan{
+    display: flex;
+    align-items: center;
+}
+.selectPlan button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#choose{
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    color: #323232;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+}
+#choose:hover{
+    background: #F7F7F7;
+}
+#choose:active{
+    box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+}
+#choose:focus{
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
+}
+#cancel{
+    margin-left: 8px;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.body{
+    width: 100%;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 100ms ease-in-out;
+}
+.body.is-active{
+    height: 106px;
+}
+.bodyHead{
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+.bodyHead button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.bodyHead button img{
+    width: 20px;
+    height: 20px;
+}
+#setup{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #303030;
+    margin-bottom: 4px;
+}
+#setupNote{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #303030;
+    margin-bottom: 16px;
+}
+.progressBar{
+    display: flex;
+    align-items: center;
+}
+.progressBar > div{
+    display: flex;
+    align-items: center;
+}
+.progressBar p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #303030;
+    margin-right: 8px;
+}
+.barContainer{
+    width: 72px;
+    height: 4px;
+    background-color: #e3e3e3;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#bar{
+    width: 0%;
+    height: 100%;
+    background-color: #1a1a1a;
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+.customMenu{
+    height: 40px;
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+    overflow: hidden;
+    transition: 100ms ease-in;
+    border-radius: 10px;
+}
+.customMenu.is-active{
+    height: auto;
+    background-color: #f3f3f3;
+}
+
+.customMenu.is-active .customImage{
+    display: block;
+}
+.checkbox{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 200ms ease-in;
+}
+.checkbox:hover .unchecked circle{
+    stroke-dasharray: 0 0;
+}
+#loading0, #loading2, #loading3, #loading4, #loading1{
+    animation: spin 1000ms infinite linear ;
+}
+#checked0, #checked2, #checked3, #checked4, #checked1{
+    animation: done 300ms 1 linear ;
+    transition: all 0.3s ease;
+}
+h3{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #303030;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+.text{
+    margin-right: 96px;
+}
+.text p{
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #616161;
+    cursor: pointer;
+}
+.text p a{
+    text-decoration: none;
+    color: #005bd3;
+    font-size: 14px;
+}
+.text button{
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #F6F3F6;
+    border-radius: 6px;
+    border-top: 1.5px solid  #ffffff33;
+    border-right: 1.5px solid  #ffffff33;
+    border-left: 1.5px solid #ffffff33;
+    background: #404040;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+    cursor: pointer;
+}
+.text button:hover{
+    background: #2A2A2A;
+}
+.text button:active{
+    background: #2B2B2B;
+}
+.text button:focus{
+    background: #2A2A2A;
+}
+.customImage{
+    display: none;
+    height: 120px;
+    cursor: pointer;
+}
+.import{
+    display: flex;
+}
+#importProduct{
+    margin-left: 16px;
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    color: #323232;
+    font-weight: 600;
+    font-size: 12px;
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* keyframes */
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes done {
+    from{
+        
+        opacity: 0;
+        transform: scale(0) rotate(270deg);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+
+@media (max-width:600px){
+    *:hover{
+        background-color: none;
+    }
+    #logo1{
+        display: none;
+    }
+    #logo2{
+        display: block;
+    }
+    .notification{
+        max-width: 358px;
+    }
+    
+    .notificationTab button{
+        background: transparent;
+    }
+    #full{
+        display: none;
+    }
+    #sub{
+        display: block;
+        padding: 9px 5px 10px 5px;
+        margin: 0;
+        height: 32px;
+        width: 32px;
+    }
+    .heading{
+        display: block;
+        position: relative;
+    }
+    .intro{
+        margin-bottom: 16px;
+        max-width: 330px;
+    }
+    #cancel{
+        position: absolute;
+        padding: 0;
+        margin-left: 0;
+        top: 20px;
+        right: 16px;
+    }
+    .body, .heading{
+        border-radius: 0px;
+    }
+    .body.is-active{
+        height: 124px;
+    }
+    .customMenu.is-active .customImage{
+        display: none;
+    }
+    .text{
+        margin-right: 0;
+    }
+    .searchBar input{
+        width: 238px;
+    }
+}
